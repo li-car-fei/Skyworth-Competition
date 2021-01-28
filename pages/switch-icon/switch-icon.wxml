@@ -1,0 +1,8 @@
+<view class="container">
+	<view class='container__iconContainer' bindtap="selectIcon">
+		<image src="{{imagePath}}"></image>
+	</view>
+</view>
+<text class="text-m" style="color:#cccccc;">点击头像可更换</text>
+<text class="text-m" style="color:#cccccc;">请选择一张图片（支持jpg、jpeg、bmp、png）</text>
+<button class="confirm text-l" disabled="{{!iconIsSelected}}" bindtap="confirm">确定</button>

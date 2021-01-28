@@ -1,0 +1,7 @@
+<input class="input view-shadow text-m" placeholder="用户名" bindinput="input" data-input-type="username" maxlength="16"></input>
+<input class="input view-shadow text-m" placeholder="密码" bindinput="input" password="{{true}}" data-input-type="password" maxlength="16"></input>
+<button class="login" bindtap="login">登录</button>
+<view class="textContainer">
+  <text class="text-s" style="color:#333333;">登录代表同意</text>
+  <text class="text-s" style="color:#9cc3f9;">百舸争流用户协议、隐私协议</text>
+</view>

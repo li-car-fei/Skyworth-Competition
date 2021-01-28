@@ -1,0 +1,31 @@
+<view class="container">
+	<view class='container__iconContainer'>
+		<image src="{{userInfo.avatarUrl}}"></image>
+	</view>
+  <text class='text-l' style="margin-top:20rpx;">{{userInfo.username}}</text>
+</view>
+<view class="textContainer">
+  <view class="textContainer__newPassword">
+  <input class="textContainer__newPassword__input text-m view-shadow" 
+        placeholder="请输入新修改的邮箱"
+        maxlength="18"
+        bindinput="input"
+        data-input-type="newEmail"
+        password="{{true}}"
+        ></input>
+  </view>
+  <!-- <view class="textContainer__newPassword">
+  <input class="textContainer__newPassword__input text-m view-shadow" 
+        placeholder="请重复新修改的邮箱"
+        maxlength="16"
+        bindinput="input"
+        data-input-type="repeatPassword"
+        password="{{true}}"
+        ></input>
+  </view> -->
+  <view class="textContainer__validNumber">
+    <input class="textContainer__validNumber__input view-shadow text-m" placeholder="请输入验证码" bindinput="input" data-input-type="validNumber" maxlength="6"></input>
+    <button class="textContainer__getValidNumber" disabled="{{isGettingValidNumber}}" bindtap="getValidNumber">{{sendMg}}</button>
+  </view>
+</view>
+<button class="confirm text-l" bindtap="confirm">确定</button>

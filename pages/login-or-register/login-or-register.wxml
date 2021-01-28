@@ -1,0 +1,7 @@
+<view class="container">
+	<view class='container__iconContainer'>
+		<image src="{{defaultAvatar}}"></image>
+	</view>
+</view>
+<button class="wechatLogin" wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" bindtap="login">登录</button>
+<!-- <text class="telLogin text-m" bindtap="register">注册</text> -->

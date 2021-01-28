@@ -1,0 +1,19 @@
+<view style="padding-bottom:100rpx">
+<view class='container view-shadow'>
+  <view class="container__item" wx:for='{{classifications}}' wx:key="index">
+    <view class="container__item__title">
+      <view class="container__item__title__icon {{item.iconName}}"></view>
+      <text>{{item.typeName}}</text>
+      <view class="container__item__title__down down-icon {{onTap[index]?'onTap':''}}" bindtap="downOnTap" data-index="{{index}}"></view>
+    </view>
+    <view class="container__item__list" wx:if="{{onTap[index]}}">
+      <view class="container__item__list__item" wx:for="{{item.listItems}}" wx:for-item="detail" wx:key="index" bindtap="listItemOnTap" data-id="{{detail._id}}">
+        <text>{{detail.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 底部导航栏 -->
+
+<tabbar tabbar="{{ tabbar }}"></tabbar>
+</view>

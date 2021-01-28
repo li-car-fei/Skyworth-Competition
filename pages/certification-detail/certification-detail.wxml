@@ -1,0 +1,7 @@
+<view class='mainContainer view-shadow'>
+  <text class="text-l">{{currentItem.detail}}</text>
+</view>
+<view class="buttonContainer">
+  <button class="enterButton text-l" bindtap="getentrance">报名入口</button>
+  <button class="enterButton text-l" bindtap="getscore">查分入口</button>
+</view>

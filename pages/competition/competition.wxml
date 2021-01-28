@@ -1,0 +1,28 @@
+<!-- <view style="padding-bottom:100rpx"> -->
+<top-bar classification='{{classification}}' style='width: 100%;'></top-bar>
+<swiper class="swiper view-shadow" 
+        autoplay="{{true}}"
+        circular="{{true}}"
+        >
+  <swiper-item wx:for='{{swiperImg}}' wx:key='index'>
+  <image src="{{item}}"
+         lazy-load="{{true}}"
+         style="width:100%"
+         mode="aspectFit"></image>
+  </swiper-item>
+</swiper>
+<view class="timeLine view-shadow">
+  <view class='timeLine__classification {{timeLineCurrent==index?"-selected":""}}'
+        wx:for="{{timeLine}}" 
+        wx:key="index"
+        bindtap="timeLineOnTap"
+        data-index="{{index}}">
+    <text class="text-m">{{item}}</text>
+  </view>
+</view>
+<list listItems='{{listItems[timeLineCurrent]}}' bind:refreshData='refreshData' id='list'/>
+<text class="bottomHint text-m" wx:if='{{isAllDataLoaded}}'>已经到底了！</text>
+
+<!-- 底部导航栏 -->
+<tabbar tabbar="{{ tabbar }}"></tabbar>
+<!-- </view> -->

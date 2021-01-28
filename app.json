@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/certification/certification",
+    "pages/competition/competition",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/userInfo/userInfo",
+    "pages/edit-new-password/edit-new-email",
+    "pages/mine/mine",
+    "pages/favourite/favourite",
+    "pages/login-or-register/login-or-register",
+    "pages/switch-icon/switch-icon",
+    "pages/search-result/search-result",
+    "pages/search/search",
+    "pages/certification-detail/certification-detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "百舸争流",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#ACBBBF",
+    "selectedColor": "#4C7DC2",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/competition/competition",
+        "text": "比赛",
+        "iconPath": "/src/icons/trophy.png",
+        "selectedIconPath": "/src/icons/trophy_selected.png"
+      },
+      {
+        "pagePath": "pages/certification/certification",
+        "text": "考证",
+        "iconPath": "/src/icons/audit.png",
+        "selectedIconPath": "/src/icons/audit_selected.png"
+      },
+      {
+        "pagePath": "pages/favourite/favourite",
+        "text": "收藏",
+        "iconPath": "/src/icons/star.png",
+        "selectedIconPath": "/src/icons/star_selected.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/src/icons/user.png",
+        "selectedIconPath": "/src/icons/user_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,111 @@
+page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+}
+
+.headContainer {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.headContainer__iconContainer {
+  height: 200rpx;
+  width: 200rpx;
+  margin-right: 50rpx;
+  margin-left: 30rpx;
+}
+
+.headContainer__iconContainer__icon {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.headContainer__iconContainer__register {
+  color: #9cc3f9;
+}
+
+.headContainer__iconContainer__userInfo{
+  display: flex;
+  flex-direction: column;
+}
+
+.headContainer__iconContainer__userInfo__userTel{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.headContainer__iconContainer__userInfo__userTel__number{
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.headContainer__iconContainer__userInfo__userTel__edit{
+  display: flex;
+  flex-direction: row;
+  border-radius: 30rpx;
+  background-color: #fafafa;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  align-items: center;
+}
+
+.headContainer__iconContainer__userInfo__userTel__edit__icon{
+  height: 30rpx;
+  width: 30rpx;
+}
+
+.functionList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.functionList__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fafafa;
+  margin-bottom: 20rpx;
+  height: 100rpx;
+  position: relative;
+}
+
+
+
+.functionList__item__name {
+  color: #333333;
+}
+
+.text-disable {
+  color: #cccccc;
+}
+
+.functionList__item__icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 15rpx;
+}
+
+.functionList__item__arrowIcon {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 20rpx;
+}
+
+.quit{
+  margin-top: 50rpx;
+  color: #333333;
+  width: 100%;
+  background-color: #fafafa;
+  font-size: 30rpx;
+}

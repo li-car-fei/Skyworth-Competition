@@ -1,0 +1,15 @@
+<view class="topBar view-shadow">
+  <input class="topBar__input text-m" placeholder="搜索" bindinput="searchInput" value="{{searchInput}}"></input>
+  <button class="topBar__searchButton text-s" bindtap="searchOnTap" disabled="{{searchInputIsNull}}">搜索</button>
+</view>
+<view class="history" wx:if='{{historyList}}'>
+  <text class="history__title text-l">搜索历史</text>
+  <text class="history__clear text-m" bindtap="clearHistory">清除搜索历史</text>
+  <view class="history__container">
+    <view class="history__container__item text-m" 
+          wx:for='{{historyList}}' 
+          wx:key='index' 
+          data-index="{{index}}"
+          bindtap="historyItemOnTap">{{item}}</view>
+  </view>
+</view>

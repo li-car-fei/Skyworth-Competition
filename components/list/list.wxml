@@ -1,0 +1,35 @@
+<view class="list">
+  <view class="list__container view-shadow" 
+        wx:for="{{listItems}}" 
+        wx:key='index'
+        >
+    <image mode="aspectFill" src='{{item.matchImageUrl}}' style="width:225rpx;height:272rpx;border-radius: 50rpx;"></image>
+    <view class="list__container__texts">
+      <text class="text-m list__container__texts__matchName">{{item.matchName}}</text>
+      <text class="text-m" style="display:block;margin-top:20rpx;">比赛开始时间：{{item.matchBeginTime}}</text>
+      <text class="text-m">级别：{{filter.Level(item.matchLevel)}}</text>
+    </view>
+    <view class='list__container__favourite {{item.isFav?"star-fill-icon":"star-icon"}}' bindtap="toggleFavourite" data-id="{{item._id}}"></view>
+  </view>
+</view>
+
+<wxs module='filter'>
+  module.exports.Level=function(matchLevel){
+    switch(matchLevel){
+      case 0:
+        return '国家级';
+        break;
+      case 1:
+        return '省级';
+        break;
+      case 2:
+        return '校级';
+        break;
+      case 3:
+        return '院级';
+        break;
+      default:
+        return '无级别'
+    }
+  }
+</wxs>

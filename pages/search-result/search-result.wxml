@@ -1,0 +1,5 @@
+<view class="topBar view-shadow">
+  <text class="text-l" style="color:#333333;">搜索结果</text>
+</view>
+<list listItems='{{searchResult}}' wx:if='{{!resultIsNull}}'/>
+<text class="text-m" style="margin-top:30rpx;" wx:else>暂无搜索结果！</text>

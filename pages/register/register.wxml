@@ -1,0 +1,18 @@
+<input class="input view-shadow text-m" placeholder="用户名(2-16位的字母或数字)" bindinput="input" data-input-type="username" maxlength="16"></input>
+<input class="input view-shadow text-m" placeholder="密码(6-16位字符)" bindinput="input" password="{{true}}" data-input-type="password" maxlength="16"></input>
+<input class="input view-shadow text-m" placeholder="确认密码" bindinput="input" password="{{true}}" data-input-type="repeatPassword" maxlength="16"></input>
+<view class="container">
+  <input class="container__email text-m view-shadow" 
+        placeholder="请输入邮箱"
+        maxlength="-1"
+        bindinput="emailInput"
+        ></input>
+  <button class="container__getValidNumber" disabled="{{!emailIsLegal || isGettingValidNumber}}" bindtap="getValidNumber">{{sendMg}}</button>
+</view>
+<input class="input view-shadow text-m" placeholder="请输入验证码" bindinput="input" data-input-type="validNumber" maxlength="6"></input>
+<text class="errorHint text-m" wx:if="{{validNumberIsWrong}}" style="color:#ff0000;align-self:center;">验证码错误</text>
+<button class="register" bindtap="register">注册</button>
+<view class="textContainer">
+  <text class="text-s" style="color:#333333;">注册代表同意</text>
+  <text class="text-s" style="color:#9cc3f9;">百舸争流用户协议、隐私协议</text>
+</view>

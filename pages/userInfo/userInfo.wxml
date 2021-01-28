@@ -1,0 +1,25 @@
+<view class="topContainer">
+<view class="topContainer__iconContainer">
+  <image class="topContainer__iconContainer__icon" src="{{userInfo.avatarUrl}}"></image>
+  </view>
+  <text class="topContainer__userName text-l">{{userInfo.username}}</text>
+</view>
+<view class="textContainer">
+  <view class="textContainer__major">
+    <text class="text-m">专业：</text>
+    <picker class="textContainer__major__picker view-shadow"
+            bindchange="bindPickerChange" 
+            value="{{index}}" 
+            range="{{majors}}"
+            mode="selector">
+    <view class="textContainer__major__picker__view text-m">
+      {{majorIndex==-1?"请点击此处选择专业":majors[majorIndex]}}
+    </view>
+  </picker>
+  </view>
+  <view class="textContainer__email">
+    <text class="text-m">邮箱：</text>
+    <input class="textContainer__email__input view-shadow text-m" placeholder="请输入邮箱" bindinput="emailInput"></input>
+  </view>
+</view>
+<button class="confirm text-l" disabled="{{majorIndex==-1 ? true : (isEmailNull?true:false)}}">确定</button>

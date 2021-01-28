@@ -1,0 +1,30 @@
+<view class="headContainer">
+  <view class="headContainer__iconContainer" bindtap="switchIcon">
+    <image class="headContainer__iconContainer__icon" src="{{state?userInfo.avatarUrl:defaultAvatar}}"></image>
+  </view>
+  <text class="headContainer__iconContainer__register text-l" wx:if='{{!state}}' bindtap="register">
+    注册/登录
+  </text>
+  <view class="headContainer__iconContainer__userInfo" wx:if='{{state}}'>
+    <text class="headContainer__iconContainer__userInfo__userName text-l">{{userInfo.username}}</text>
+    <view class="headContainer__iconContainer__userInfo__userTel">
+      <text class="headContainer__iconContainer__userInfo__userTel__number text-m">{{userInfo.email}}</text>
+      <view class="headContainer__iconContainer__userInfo__userTel__edit" bindtap="editEmail">
+        <view class="headContainer__iconContainer__userInfo__userTel__edit__icon edit-fill-icon"></view>
+        <text class="text-m">修改邮箱</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="functionList">
+  <view class="functionList__item" wx:for='{{functionList}}' wx:key='index' data-index="{{index}}" bindtap="functionListOnTap">
+    <view class="functionList__item__icon {{item.iconName + (state?'':'-unable')}}"></view>
+    <text class="functionList__item__name text-m {{state?'':'text-disable'}}">{{item.name}}</text>
+    <view class="functionList__item__arrowIcon {{'right-icon' + (state?'':'-unable')}}"></view>
+  </view>
+</view>
+<button class="quit" wx:if='{{state}}' bindtap="logout">退出登录</button> 
+
+<!-- 底部导航栏 -->
+<tabbar tabbar="{{ tabbar }}"></tabbar>
+

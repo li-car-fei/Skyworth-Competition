@@ -1,0 +1,82 @@
+page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+}
+
+.container{
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__iconContainer{
+  height: 300rpx;
+  width: 300rpx;
+}
+
+.container__iconContainer image{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.textContainer__newPassword{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 35rpx;
+  margin-left: 30rpx;
+}
+
+.textContainer__newPassword__input{
+  margin-left: 30rpx;
+  padding: 20rpx;
+}
+
+.textContainer__getValidNumber{
+  background-color: #9cc3f9;
+  color: white;
+  font-size: 30rpx;
+  margin-bottom: 25rpx;
+  align-self: flex-end;
+  margin-right: 20rpx;
+}
+
+.textContainer__validNumber{
+  display: flex;
+  flex-direction: row;
+  margin-left: 30rpx;
+}
+
+.textContainer__validNumber__input{
+  margin-left: 30rpx;
+  padding: 20rpx;
+  margin-bottom: 25rpx;
+}
+
+.textContainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.textContainer__presentPhoneNumber{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50rpx;
+  margin-left: 30rpx;
+}
+
+.confirm{
+  color: white;
+  background-color: #9cc3f9;
+  width: 90%;
+  margin-top: 50rpx;
+}

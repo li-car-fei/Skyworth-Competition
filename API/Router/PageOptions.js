@@ -1,0 +1,43 @@
+export default [
+  {
+    path:'/pages/competition/competition',
+    name:'competition',
+    meta:{
+      auth:false
+    }
+  },
+  {
+    path:'/pages/favourite/favourite',
+    name:'favourite',
+    meta:{
+      auth:true                                   // 需要登录状态
+    }
+  },
+  {
+    path:'/pages/certification/certification',
+    name:'certification',
+    meta:{
+      auth:false
+    }
+  },
+  {
+    path:'/pages/mine/mine',
+    name:'mine',
+    meta:{
+      auth:false
+    }
+  },
+  {
+    path:'/pages/login-or-register/login-or-register',
+    name:'login-or-register',
+    meta:{
+      auth:false
+    } 
+  },{
+    path:'/pages/search/search',
+    name:'search',
+    meta:{
+      auth:true
+    }
+  }
+]

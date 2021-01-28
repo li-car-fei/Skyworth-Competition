@@ -1,0 +1,16 @@
+<view style="padding-bottom:100rpx">
+<top-bar classification='{{classification}}' style='width:100%;' id='topBar' bind:topBarChange='topBarChange'></top-bar>
+<scroll-view scroll-y='{{true}}' bind:scrolltolower='scrollToLower' enable-flex='{{true}}'> 
+  <list listItems='{{listItems[topBarCurrent][currentState]}}' bind:refreshData='refreshData' bind:refreshFavList='refreshFavList' id='list'/>
+  <text class="bottomHint text-m" wx:if='{{isAllDataLoaded}}'>已经到底了！</text>
+</scroll-view>
+<view class="state view-shadow">
+  <view class="state__items {{index==currentState?'-selected':''}}" wx:for='{{states}}' wx:key='index' bindtap="stateOnTap" data-index="{{index}}">
+    <text class="text-l">{{item}}{{index+1==states.length?'':'/'}}</text>
+  </view>
+</view>
+
+<!-- 底部导航栏-->
+<tabbar tabbar="{{ tabbar }}"></tabbar> 
+</view>
+
